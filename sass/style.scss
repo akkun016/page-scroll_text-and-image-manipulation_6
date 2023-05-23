@@ -1,0 +1,109 @@
+@charset 'utf-8';
+@import 'reset';
+
+$font-black: #111111;
+
+main {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 100px 6%;
+  .blank-block {
+    height: 50vh;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  .works {
+    width: 100%;
+    .works-title {
+      font-size: 3.4rem;
+      color: $font-black;
+      margin-bottom: 140px;
+      line-height: 1;
+      span {
+        font-size: 0.85rem;
+        vertical-align: top;
+      }
+    }
+    .works-items {
+      list-style: none;
+      li {
+        border-bottom: solid 1px $font-black;
+        &:first-child {
+          border-top: solid 1px $font-black;
+        }
+        .works-item {
+          position: relative;
+          display: flex;
+          justify-content: space-between;
+          padding: 40px 0 100px;
+          text-decoration: none;
+          color: $font-black;
+          span {
+            position: absolute;
+            top: 10px;
+            right: 0px;
+            font-size: 0.5rem;
+            font-weight: bold;
+          }  
+          &__left {
+            width: 44%;
+            height: auto;
+            position: relative;
+            .top-item {
+              position: relative;
+              &__title {
+                height: 100px;
+                margin-bottom: 20px;
+                overflow: hidden;
+                p {
+                  line-height: 1.5;
+                  font-size: 2.25rem;
+                  transition: .5s ease .2s;
+                }
+              .rotate-up {
+                  transform: translateY(-100%);
+                }
+              }
+              &__sub {
+                font-size: 1rem;
+              }
+            }
+            .bottom-item {
+              position: absolute;
+              bottom: 0;
+              p {
+                font-size: 1.1rem;
+                font-weight: bold;
+                white-space: nowrap;
+                &:nth-child(2) {
+                  margin-top: 12px;
+                  font-size: 0.65rem;
+                  font-weight: normal;
+                  color: #999999;
+                }
+              }
+            }
+          }
+          &__right {
+            height: auto;
+            width: 50%;
+            object-fit: cover;
+            transition: .6s ease .2s;
+            overflow: hidden;
+            img {
+              display: inline-block;
+              width: 100%;
+              transition: .6s ease .2s;
+            }
+            &.shrink {
+              transform: scale(0.9);
+              img {
+                transform: scale(1.3);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
